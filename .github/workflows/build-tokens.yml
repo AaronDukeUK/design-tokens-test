@@ -1,0 +1,20 @@
+name: Build tokens
+on:
+  push:
+    paths:
+      - 'design-tokens/**.json'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci
+      - run: |
+          npm i -D style-dictionary @tokens-studio/sd-transforms
+          npx style-dictionary build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tokens-artifacts
+          path: build/
