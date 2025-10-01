@@ -2,7 +2,7 @@ name: Build tokens
 on:
   push:
     paths:
-      - 'design-tokens/**.json'
+      - 'tokens/**.json'
 jobs:
   build:
     runs-on: ubuntu-latest
