@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "tokens:build": "node build-tokens.mjs"
+    },
+  "devDependencies": {
+    "@tokens-studio/sd-transforms": "^2.0.1",
+    "style-dictionary": "^5.1.0"
+  }
+}
