@@ -1682,6 +1682,30 @@
         }
       }
     },
+    "secondary": {
+      "color": {
+        "$type": "color",
+        "$value": "{secondary.500}"
+      },
+      "contrast": {
+        "color": {
+          "$type": "color",
+          "$value": "#ffffff"
+        }
+      },
+      "hover": {
+        "color": {
+          "$type": "color",
+          "$value": "{secondary.600}"
+        }
+      },
+      "active": {
+        "color": {
+          "$type": "color",
+          "$value": "{secondary.700}"
+        }
+      }
+    },
     "highlight": {
       "background": {
         "$type": "color",
@@ -14756,55 +14780,55 @@
       "secondary": {
         "background": {
           "$type": "color",
-          "$value": "{secondary.100}"
+          "$value": "{secondary.color}"
         },
         "hover": {
           "background": {
             "$type": "color",
-            "$value": "{secondary.200}"
+            "$value": "{secondary.hover.color}"
           },
           "border": {
             "color": {
               "$type": "color",
-              "$value": "{secondary.200}"
+              "$value": "{secondary.hover.color}"
             }
           },
           "color": {
             "$type": "color",
-            "$value": "{secondary.700}"
+            "$value": "{secondary.contrast.color}"
           }
         },
         "active": {
           "background": {
             "$type": "color",
-            "$value": "{secondary.300}"
+            "$value": "{secondary.active.color}"
           },
           "border": {
             "color": {
               "$type": "color",
-              "$value": "{secondary.300}"
+              "$value": "{secondary.active.color}"
             }
           },
           "color": {
             "$type": "color",
-            "$value": "{secondary.800}"
+            "$value": "{secondary.contrast.color}"
           }
         },
         "border": {
           "color": {
             "$type": "color",
-            "$value": "{secondary.100}"
+            "$value": "{secondary.color}"
           }
         },
         "color": {
           "$type": "color",
-          "$value": "{secondary.600}"
+          "$value": "{secondary.contrast.color}"
         },
         "focus": {
           "ring": {
             "color": {
               "$type": "color",
-              "$value": "{secondary.600}"
+              "$value": "{secondary.color}"
             },
             "shadow": {
               "$type": "boxShadow",
