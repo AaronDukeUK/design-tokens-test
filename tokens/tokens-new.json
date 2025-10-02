@@ -1310,8 +1310,6 @@
           "$value": "{primary.color}"
         },
         "offset": {
-          "$type": "borderWidth",
-          "$value": "2",
           "stroke": {
             "$type": "border",
             "$value": {
@@ -1319,7 +1317,9 @@
               "width": "{focus.ring.offset}",
               "style": "solid"
             }
-          }
+          },
+          "$type": "borderWidth",
+          "$value": "2"
         },
         "shadow": {
           "$type": "boxShadow",
@@ -21930,50 +21930,6 @@
       }
     }
   },
-  "app": {
-    "app": {
-      "font": {
-        "size": {
-          "$type": "fontSizes",
-          "$value": "14"
-        }
-      },
-      "card": {
-        "background": {
-          "$type": "color",
-          "$value": "{content.background}"
-        }
-      },
-      "sm": {
-        "font": {
-          "size": {
-            "$type": "fontSizes",
-            "$value": "0.875rem"
-          }
-        },
-        "line": {
-          "height": {
-            "$type": "lineHeights",
-            "$value": "1.25rem"
-          }
-        }
-      },
-      "lg": {
-        "font": {
-          "size": {
-            "$type": "fontSizes",
-            "$value": "1.125rem"
-          }
-        },
-        "line": {
-          "height": {
-            "$type": "lineHeights",
-            "$value": "1.75rem"
-          }
-        }
-      }
-    }
-  },
   "$themes": [
     {
       "id": "ae108eb486424d2547da3f55531d4243d09864d8",
@@ -22011,8 +21967,7 @@
         "aura/semantic": "enabled",
         "aura/semantic/light": "enabled",
         "aura/component": "enabled",
-        "aura/component/light": "enabled",
-        "app": "enabled"
+        "aura/component/light": "enabled"
       },
       "group": "Aura",
       "$figmaCollectionId": "VariableCollectionId:7225:3443",
@@ -24281,8 +24236,7 @@
         "aura/semantic": "enabled",
         "aura/semantic/dark": "enabled",
         "aura/component": "enabled",
-        "aura/component/dark": "enabled",
-        "app": "enabled"
+        "aura/component/dark": "enabled"
       },
       "group": "Aura",
       "$figmaCollectionId": "VariableCollectionId:7225:3443",
@@ -26429,8 +26383,7 @@
       "aura/semantic/dark",
       "aura/component",
       "aura/component/light",
-      "aura/component/dark",
-      "app"
+      "aura/component/dark"
     ]
   }
 }
