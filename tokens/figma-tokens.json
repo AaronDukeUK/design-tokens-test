@@ -7171,9 +7171,9 @@
             "stroke": {
               "$type": "border",
               "$value": {
-                "color": "{listbox.focus.ring.color}",
-                "width": "{listbox.focus.ring.width} + {listbox.focus.ring.offset}",
-                "style": "{listbox.focus.ring.style}"
+                "color": "#fff",
+                "width": "0",
+                "style": "solid"
               }
             },
             "offset": {
@@ -7181,7 +7181,7 @@
                 "$type": "border",
                 "$value": {
                   "color": "{app.card.background}",
-                  "width": "{listbox.focus.ring.offset}",
+                  "width": "0",
                   "style": "solid"
                 }
               }
@@ -7190,7 +7190,7 @@
           "stroke": {
             "$type": "border",
             "$value": {
-              "color": "{listbox.focus.border.color}",
+              "color": "#fff",
               "width": "1",
               "style": "solid"
             }
@@ -7199,7 +7199,7 @@
         "stroke": {
           "$type": "border",
           "$value": {
-            "color": "{listbox.border.color}",
+            "color": "#fff",
             "width": "1",
             "style": "solid"
           }
@@ -7208,7 +7208,7 @@
           "stroke": {
             "$type": "border",
             "$value": {
-              "color": "{listbox.hover.border.color}",
+              "color": "#fff",
               "width": "1",
               "style": "solid"
             }
@@ -21807,7 +21807,7 @@
         "detail": {
           "color": {
             "$type": "color",
-            "$value": "{secondary.0}"
+            "$value": "{surface.0}"
           }
         },
         "shadow": {
@@ -21838,6 +21838,10 @@
                 "shadow": {
                   "$type": "boxShadow",
                   "$value": "none"
+                },
+                "offset": {
+                  "$type": "number",
+                  "$value": "0"
                 }
               }
             }
@@ -22000,6 +22004,50 @@
       }
     }
   },
+    "app": {
+        "app": {
+            "font": {
+                "size": {
+                    "$type": "fontSizes",
+                    "$value": "14"
+                }
+            },
+            "card": {
+                "background": {
+                    "$type": "color",
+                    "$value": "{content.background}"
+                }
+            },
+            "sm": {
+                "font": {
+                    "size": {
+                        "$type": "fontSizes",
+                        "$value": "0.875rem"
+                    }
+                },
+                "line": {
+                    "height": {
+                        "$type": "lineHeights",
+                        "$value": "1.25rem"
+                    }
+                }
+            },
+            "lg": {
+                "font": {
+                    "size": {
+                        "$type": "fontSizes",
+                        "$value": "1.125rem"
+                    }
+                },
+                "line": {
+                    "height": {
+                        "$type": "lineHeights",
+                        "$value": "1.75rem"
+                    }
+                }
+            }
+        }
+    },
   "$themes": [
     {
       "id": "ae108eb486424d2547da3f55531d4243d09864d8",
@@ -22475,7 +22523,8 @@
         "aura/semantic": "enabled",
         "aura/semantic/light": "enabled",
         "aura/component": "enabled",
-        "aura/component/light": "enabled"
+        "aura/component/light": "enabled",
+        "app": "enabled"
       },
       "group": "Aura",
       "$figmaCollectionId": "VariableCollectionId:7225:3443",
@@ -26259,7 +26308,8 @@
         "aura/semantic": "enabled",
         "aura/semantic/dark": "enabled",
         "aura/component": "enabled",
-        "aura/component/dark": "enabled"
+        "aura/component/dark": "enabled",
+        "app": "enabled"
       },
       "group": "Aura",
       "$figmaCollectionId": "VariableCollectionId:7225:3443",
@@ -28482,7 +28532,8 @@
       "aura/semantic/dark",
       "aura/component",
       "aura/component/light",
-      "aura/component/dark"
+      "aura/component/dark",
+      "app"
     ]
   }
 }

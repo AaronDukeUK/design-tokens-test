@@ -1,26 +1,22 @@
+// style-dictionary.config.mjs
 import StyleDictionary from 'style-dictionary';
 import { register, expandTypesMap } from '@tokens-studio/sd-transforms';
 
-register(StyleDictionary);
+// ⬇️ Add excludeParentKeys: true
+register(StyleDictionary, { excludeParentKeys: true });
 
-const sd = new StyleDictionary({
-    source: ['tokens/tokens.json'],
+export default {
+    source: ['tokens/figma-tokens.json'],
     preprocessors: ['tokens-studio'],
     expand: { typesMap: expandTypesMap },
-
     platforms: {
         css: {
             transformGroup: 'tokens-studio',
             transforms: ['name/kebab'],
             buildPath: 'build/css/',
             files: [
-                {
-                    destination: 'tokens.css',
-                    format: 'css/variables',
-                    options: {
-                        selector: ':root'
-                    }
-                }
+                { destination: 'tokens.css', format: 'css/variables',
+                    options: { selector: ':root', outputReferences: true } }
             ]
         },
         ts: {
@@ -28,15 +24,10 @@ const sd = new StyleDictionary({
             transforms: ['name/kebab'],
             buildPath: 'build/ts/',
             files: [
-                {
-                    destination: 'tokens.ts',
-                    format: 'javascript/module'
-                }
+                { destination: 'tokens.ts', format: 'javascript/module',
+                    options: { outputReferences: true } }
             ]
         }
-    }
-});
-
-await sd.cleanAllPlatforms();
-await sd.buildAllPlatforms();
-console.log('✅ Tokens built to build/css and build/ts');
+    },
+    log: {"verbosity": "verbose"}
+};
