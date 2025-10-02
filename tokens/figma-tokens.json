@@ -16119,11 +16119,11 @@
       "secondary": {
         "background": {
           "$type": "color",
-          "$value": "{secondary.100}"
+          "$value": "{secondary.color}"
         },
         "color": {
           "$type": "color",
-          "$value": "{secondary.600}"
+          "$value": "{secondary.contrast.color}"
         }
       },
       "success": {
@@ -16215,11 +16215,11 @@
       "secondary": {
         "background": {
           "$type": "color",
-          "$value": "{surface.100}"
+          "$value": "{secondary.100}"
         },
         "color": {
           "$type": "color",
-          "$value": "{surface.600}"
+          "$value": "{secondary.600}"
         }
       },
       "success": {
